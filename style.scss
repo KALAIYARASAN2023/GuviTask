@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------REUSABLE CODE SCSS----------------------- */
+
+    $box-shadow: -1px 6px 16px -1px rgba(8, 8, 8, 1);
+    $btns-background: rgb(29, 106, 193);
+    $white: white;
+    $shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+
+
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Registermodal {
+    display: grid;
+    place-items: center;
+}
+
+.Registermodal, .Loginmodal {
+    transform: translateY(25%);
+}
+
+/* --------------------------LOGIN DIV------------------- */
+
+.loginMain .grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.loginMain {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.loginDiv h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.loginMain label {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.loginMain .login_Data input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.loginDiv {
+    width: max-content;
+    padding: 1rem 4rem;
+    height: max-content;
+    background-color: lightblue;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+}
+
+.LoginImage {
+    position: absolute;
+}
+
+.LoginImage img {
+    width: 250px;
+    height: 250px;
+}
+
+
+:is(.login_Data .login-fields) #error1,
+#error2 {
+    color: rgb(167, 9, 9);
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    position: absolute;
+    font-weight: 600;
+}
+
+.login_Data #succefulLogin,
+.login_Data #successfulLogin2 {
+    color: rgb(17, 92, 17);
+    font-family: 600;
+    text-align: center;
+}
+
+.login_Data .login-fields p small a {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.2rem 0 0 0;
+    text-decoration: none;
+}
+
+.newuser a{
+    text-decoration: none;
+}
+
+/* ---------------------LEFT SIDE------------------ */
+
+.login_Image {
+    background-color: rgb(104, 166, 166);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30rem;
+}
+
+.loginMoto {
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.loginMoto h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 1rem
+}
+
+.loginMoto p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+    color: $white;
+}
+
+/* ----------------RIGHT SIDE------------- */
+
+.login_Data {
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+}
+
+.login-fields {
+    padding: 0.8rem;
+}
+
+.login-fields label {
+    display: inline-block;
+    font-weight: 900;
+}
+
+.login_Data form input {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.login_Data .loginBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBtn button {
+    padding: 1rem;
+
+}
+
+.login_Data form button {
+    width: 50%;
+    height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.login_Data button:hover {
+    background-color: rgb(45, 145, 227);
+    color: $white;
+    font-weight: 400;
+}
+
+.newuser {
+    margin: 3rem;
+    color: rgb(30, 30, 222);
+    cursor: pointer;
+}
+
+.newuser p a {
+    text-decoration: none;
+}
+
+.RegistrationDiv .grid {
+    display: grid;
+    gap: 1rem;
+}
+
+#user{
+    font-size: 1rem;
+}
+/*-- ----------------------------------------REGISTRATION SECTION -----------------------------------------------------*/
+
+.RegistrationDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+
+.RegisterBox {
+    background-color: $white;
+    width: 40%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: $shadowSupport;
+    overflow: hidden;
+    position: relative;
+}
+
+.RegistrationDiv .RegisterBox p {
+    color: rgb(167, 9, 9);
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    position: absolute;
+    font-weight: 600;
+}
+
+.RegisterBox .header {
+    background: $btns-background;
+    color: $white;
+    font-weight: 900;
+    padding: 1rem 0;
+}
+
+.RegisterBox .header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.RegistrationDiv form {
+    padding: 1.2rem;
+    position: relative;
+}
+
+form .form_fields {
+    margin: 0.4rem 0;
+}
+
+form label {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+form input,
+textarea {
+    width: 100%;
+    outline: none;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+select {
+    padding: 0.2rem;
+    margin: 0.5rem 0;
+}
+
+.btn {
+    background: $btns-background;
+    color: $white;
+    font-weight: 500;
+    border: none;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+    margin: 0.8rem 0;
+}
+
+.btnD {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+}

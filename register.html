@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+
+    <!-- ----------------------------------------REGISTRATION SECTION ----------------------------------------------------->
+    <div class="Registermodal">
+        <div class="RegistrationDiv">
+            <div class="RegisterBox">
+                <div class="header">
+                    <h2>Create Account</h2>
+                </div>
+
+                <form action="" class="form" id="form" onsubmit="return validated()">
+                    <div class="grid grid-two-columns">
+                        <div class="form_fields">
+                            <label>User Name</label>
+                            <input type="text" id="usernames" onkeyup="userNameValidate()" placeholder="Enter your name"
+                                required>
+                            <p id="nameError"></p>
+                        </div>
+                        <div class="form_fields">
+                            <label>Email</label>
+                            <input type="email" id="mailid" onkeyup="mailValidate()" placeholder="Enter your Mail ID"
+                                required>
+                            <p id="mailError"></p>
+                        </div>
+
+                        <div class="form_fields">
+                            <label>Mobile Number</label>
+                            <input type="tel" maxlength="10" id="mobilenumber" onkeyup="phoneValidate()"
+                                placeholder="Enter your Mobile Number" required>
+                            <p id="phoneError"></p>
+                        </div>
+                        <div class="form_fields">
+                            <label>Date Of Birth</label>
+                            <input title="Enter your Date of Birth" type="date" name="DOB" id="DOB" required>
+                        </div>
+
+                        <div class="form_fields">
+                            <label>City</label>
+                            <input title="Enter your City" type="text" placeholder="city" id="city" required>
+                        </div>
+
+                        <div class="form_fields">
+                            <label>Pincode</label>
+                            <input title="Enter your Pincode" type="tel" maxlength="6" placeholder="Pincode"
+                                id="pincode" required>
+                        </div>
+
+                        <div class="form_fields">
+                            <label>Password</label>
+                            <input title="Enter your Password" type="password" id="password" class="passshow"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <div class="form_fields">
+                            <label>Confirm Password</label>
+                            <input title="Enter your confirm Password" onkeyup="passwordValidate()" type="password"
+                                id="confirmpassword" class="passshow" placeholder="Enter Confirm Password" required>
+                            <p id="passwordError"></p>
+                        </div>
+                    </div>
+                    <!-- <center> -->
+                    <div class="btnD">
+                        <div class="">
+                            <button type="submit" id="Registered" class="btn"> Register </button>
+                            <input type="reset" value="reset" class="btn">
+                            <p class="successfulMessage"></p>
+                        </div>
+
+                        <h4 style="text-align: center;" id="user">Already a user?</h4> <span>
+                            <a href="index.html"> <input type="button" value="Login" class="btn"
+                                    id="loginToggle"></span></a>
+                    </div>
+                    <!-- </center> -->
+            </div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+
+</html>

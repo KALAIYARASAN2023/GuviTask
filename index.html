@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+       <!-- ---------------------------------------LOGIN---------------------------------------- -->
+       <div class="Loginmodal">
+        <div class="loginMain">
+            <div class="loginDiv">
+                <h2>Login</h2>
+
+                    <div class="login_Data">
+                          
+                        <form >
+                            <div class="login-fields">
+                                <label for="userloginmail">User name</label>
+                                <input type="text" placeholder="Enter your name" name="usernamillogin"
+                                    id="usermaillogin"> <span>
+                                    <p id="error1"></p>
+                                </span>
+                            </div>
+                            <div class="login-fields">
+                                <label for="userloginpass">Password</label>
+                                <div class="showpass">
+                                    <input type="password" placeholder="Enter your password" name="userloginpass"
+                                        id="userloginpass" >
+                                    <span onclick="showpass()">
+                                        <i class="fa-solid fa-eye" id="eye"></i>
+                                        <i class="fa-solid fa-eye-slash" id="eyehide"></i>
+                                    </span>
+
+                                </div> <span>
+                                    <p id="error2"></p>
+                                </span>
+                            </div>
+
+                            <div class="login-fields loginBtn">
+                                <button id="loginbutton" type="" name="submit">Login</button>
+                            </div>
+                            <p id="succefulLogin"></p>
+                            <p id="succefulLogin2"></p>
+                        </form>
+
+                        <div class="newuser">
+                           <a href="register.html"> <p id="toggleRegister"> Not have Account? <span> Create Account </span></p></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="validation.js"></script
+</body>
+</html>
